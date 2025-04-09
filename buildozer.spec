@@ -1,8 +1,11 @@
+[app]
 title = MyKivyApp
 package.name = mykivyapp
 package.domain = org.saikumar
+source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
+version = 0.1
 requirements = python3,kivy
-android.api = 31
-android.ndk = 25b
-android.arch = armeabi-v7a
+orientation = portrait
+fullscreen = 0
+android.permissions = INTERNET
