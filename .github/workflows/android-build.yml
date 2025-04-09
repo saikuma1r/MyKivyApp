@@ -42,11 +42,11 @@ jobs:
 
       - name: Install Android SDK Packages
         run: |
-          sdkmanager --sdk_root=$HOME/android-sdk --licenses <<< "y"
-          sdkmanager --sdk_root=$HOME/android-sdk \
-            "platform-tools" \
-            "platforms;android-34" \
-            "build-tools;34.0.0"
+         yes | sdkmanager --sdk_root=$HOME/android-sdk --licenses
+         yes | sdkmanager --sdk_root=$HOME/android-sdk \
+             "platform-tools" \
+             "platforms;android-34" \
+              "build-tools;34.0.0"
 
       - name: Build APK
         run: |
