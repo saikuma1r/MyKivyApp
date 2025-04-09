@@ -20,7 +20,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y zip unzip openjdk-17-jdk python3-pip libncurses5 libffi-dev libssl-dev libsqlite3-dev
+          sudo apt install -y zip unzip openjdk-17-jdk python3-pip libffi-dev libssl-dev libsqlite3-dev
 
       - name: Install Python dependencies
         run: |
@@ -47,3 +47,9 @@ jobs:
         run: |
           buildozer android clean
           buildozer android debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MyKivyApp-APK
+          path: bin/*.apk
